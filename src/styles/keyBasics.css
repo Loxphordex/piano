@@ -1,0 +1,8 @@
+.key {
+    display: inline-block;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: purple;
+    border-radius: 50%;
+}
