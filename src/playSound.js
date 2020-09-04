@@ -1,10 +1,7 @@
 import selectNote from './selectNote'
 
-export default function playSound(e, ctx) {
-  e.preventDefault()
-  e.stopPropagation()
-
-  if (ctx) {
+export default function playSound(code, ctx) {
+  if (code && ctx) {
     // ! Temp octave
     const tempOctave = 3
 
@@ -12,11 +9,10 @@ export default function playSound(e, ctx) {
     const now = ctx.currentTime
     const volume = ctx.createGain()
     const destination = ctx.destination
-    const keyCode = e.keyCode
-    const note = selectNote(keyCode, tempOctave)
+    const note = selectNote(code, tempOctave)
 
     if (osc && osc.frequency && note) {
-      volume.gain.value = 0.2
+      volume.gain.value = 0.1
       osc.type = 'sine'
       osc.start()
       osc.frequency.value = note.frequency

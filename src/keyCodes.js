@@ -33,3 +33,11 @@ export const keyCodes = [
   79,
   76
 ]
+
+export function mappedKeysAndCodes() {
+  const obj = {}
+  for (let i = 0; i < keyStrokes.length; i++) {
+    obj[keyStrokes[i]] = keyCodes[i]
+  }
+  return obj
+}
