@@ -1,15 +1,9 @@
-import selectNote from './selectNote'
-
-export default function playSound(code, ctx) {
-  if (code && ctx) {
-    // ! Temp octave
-    const tempOctave = 3
-
+export default function playSound(note, ctx) {
+  if (ctx) {
     const osc = ctx.createOscillator()
     const now = ctx.currentTime
     const volume = ctx.createGain()
     const destination = ctx.destination
-    const note = selectNote(code, tempOctave)
 
     if (osc && osc.frequency && note) {
       volume.gain.value = 0.1

@@ -8,7 +8,7 @@ export default function Key({
   return (
     <div
       key={index}
-      className={`key key-${stroke} ${isActive()}`}>
+      className={`key-${stroke} ${isActive()}`}>
     </div>
   )
 }

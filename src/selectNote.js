@@ -11,3 +11,14 @@ export default function selectNote(key, octave) {
 
   return mappedNotes[key]
 }
+
+export function getNotesForCurrentOctave(octave) {
+  const octaveMultiplier = octave * keyCodes.length - 12
+  const mappedNotes = {}
+  for (let i = 0; i < keyCodes.length; i++) {
+    const currentNote = notes[i + octaveMultiplier]
+    mappedNotes[keyCodes[i]] = currentNote
+  }
+
+  return mappedNotes
+}

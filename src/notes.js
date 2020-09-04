@@ -56,7 +56,7 @@ const baseNotes = [
   {note:  'D4', frequency: 293.66},
   {note: 'Eb4', frequency: 311.13},
   {note:  'E4', frequency: 329.63},
-  {note:  'F4', frequency: 394.23},
+  {note:  'F4', frequency: 349.23},
   {note: 'Gb4', frequency: 369.99},
   {note:  'G4', frequency: 392.00},
   {note: 'Ab4', frequency: 415.30},
