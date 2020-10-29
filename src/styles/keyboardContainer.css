@@ -4,4 +4,6 @@
     align-content: center;
     justify-content: center;
     transform: rotate(180deg);
+    margin-top: 52vh;
+    min-width: 835px;
 }

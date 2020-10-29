@@ -31,19 +31,20 @@ export default function Keyboard({ctx}) {
       e.preventDefault()
       e.stopPropagation()
       const code = e.keyCode
+      console.log(code)
       const alreadyHasCode = downKeysRef.current.find(key => key === code)
       if (!alreadyHasCode) {
         updateDownKeys([...downKeysRef.current, code])
         const note = noteRange[code]
         playSound(note, ctx)
       }
-    })
+    }, false)
 
     window.addEventListener('keyup', function(e) {
       if (downKeysRef.current) {
         updateDownKeys(downKeysRef.current.filter(key => key !== e.keyCode))
       }
-    })
+    }, false)
     setAreHandlersSet(true)
   }
 

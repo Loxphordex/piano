@@ -11,6 +11,12 @@ export default function playSound(note, ctx) {
       osc.start()
       osc.frequency.value = note.frequency
       osc.connect(volume)
+      // Ramp quickly up.
+      volume.gain.linearRampToValueAtTime(0.1, now + 0.1);
+      // Then decay down to a sustain level.
+      volume.gain.exponentialRampToValueAtTime(0.02, now + 0.3);
+
+      volume.gain.exponentialRampToValueAtTime(0.001, now + 0.9);
       osc.stop(now + 1)
       volume.connect(destination)
     }
