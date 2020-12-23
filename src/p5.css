@@ -1,0 +1,9 @@
+.p5Canvas {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.react-p5 {
+  z-index: -1;
+}

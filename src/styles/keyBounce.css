@@ -1,13 +1,14 @@
 .key-active {
     display: inline-block;
     margin: 5px;
-    width: 40px;
+    width: 60px;
     height: 40px;
-    background-color: purple;
-    border-radius: 50%;
-    transition: all 500ms;
-    -webkit-animation: animation 500ms linear both;
-    animation: animation 500ms linear both;
+    background-color: rgb(255, 251, 30);
+    box-shadow: 10px -10px 30px 10px rgb(243, 23, 206);
+    border-radius: 10% 50%;
+    transition: all 1000ms;
+    -webkit-animation: animation 1000ms linear both;
+    animation: animation 1000ms linear both;
 }
 
 /* Generated with Bounce.js. Edit at http://bouncejs.com#%7Bs%3A%5B%7BT%3A%22t%22%2Ce%3A%22b%22%2Cd%3A1000%2CD%3A0%2Cf%3A%7Bx%3A0%2Cy%3A0%7D%2Ct%3A%7Bx%3A0%2Cy%3A-40%7D%2Cs%3A3%2Cb%3A4%7D%2C%7BT%3A%22t%22%2Ce%3A%22S%22%2Cd%3A1000%2CD%3A0%2Cf%3A%7Bx%3A0%2Cy%3A0%7D%2Ct%3A%7Bx%3A0%2Cy%3A100%7D%2Cs%3A2%2Cb%3A2%7D%5D%7D */

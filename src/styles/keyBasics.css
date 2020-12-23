@@ -1,12 +1,17 @@
 .key {
     display: inline-block;
     margin: 5px;
-    width: 40px;
+    width: 72px;
     height: 40px;
-    background-color: rgb(211, 112, 211);
-    border-radius: 50%;
-    -webkit-animation: animation-return 500ms linear both;
-    animation: animation-return 500ms linear both;
+    background-color: rgb(255, 23, 255);
+    border-radius: 50% 10%;
+    transition: all 1000ms;
+    -webkit-animation: animation-return 1000ms linear both;
+    animation: animation-return 1000ms linear both;
+    box-shadow: 10px -20px 20px 10px rgb(255, 0, 0);
+
+    background-color: rgb(255, 53, 53);
+    box-shadow: 10px -10px 30px 5px rgb(255, 23, 255);
 }
 
 
