@@ -7,15 +7,15 @@ export default function TestP5(props) {
 
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(w, h).parent(canvasParentRef)
+    p5.frameRate(10)
   }
 
   const draw = (p5) => {
-    if (p5.mouseIsPressed) {
-      p5.fill(0)
-    } else {
-      p5.fill(255)
+    let randX = Math.random() * (w / 4)
+    let randY = Math.random() * (h / 4)
+    if (p5.keyIsPressed) {
+      p5.ellipse(randX, randY, 80, 80)
     }
-    p5.ellipse(p5.mouseX, p5.mouseY, 80, 80)
   }
 
   return <Sketch setup={setup} draw={draw} />

@@ -31,7 +31,6 @@ export default function Keyboard({ctx}) {
       e.preventDefault()
       e.stopPropagation()
       const code = e.keyCode
-      console.log(code)
       const alreadyHasCode = downKeysRef.current.find(key => key === code)
       if (!alreadyHasCode) {
         updateDownKeys([...downKeysRef.current, code])
