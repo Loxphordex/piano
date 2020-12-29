@@ -1,27 +1,22 @@
-import selectNote from './selectNote'
-
-export default function playSound(e, ctx) {
-  e.preventDefault()
-  e.stopPropagation()
-
+export default function playSound(note, ctx) {
   if (ctx) {
-    // ! Temp octave
-    const tempOctave = 3
-
     const osc = ctx.createOscillator()
     const now = ctx.currentTime
     const volume = ctx.createGain()
     const destination = ctx.destination
-    const keyCode = e.keyCode
-    const note = selectNote(keyCode, tempOctave)
 
     if (osc && osc.frequency && note) {
-      volume.gain.value = 0.2
-      osc.type = 'sine'
+      const randomImperfectFreq = Math.random() * 1.5
+      volume.gain.value = 0.1
+      osc.type = 'triangle'
       osc.start()
-      osc.frequency.value = note.frequency
+      osc.frequency.value = note.frequency + randomImperfectFreq
       osc.connect(volume)
-      osc.stop(now + 1)
+      //ASDR
+      volume.gain.linearRampToValueAtTime(0.1, now + 0.1);
+      volume.gain.exponentialRampToValueAtTime(0.02, now + 0.3);
+      volume.gain.exponentialRampToValueAtTime(0.0001, now + 2);
+      osc.stop(now + 2)
       volume.connect(destination)
     }
   }

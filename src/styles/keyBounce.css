@@ -1,4 +1,12 @@
-.key {
+.key-active {
+    display: inline-block;
+    margin: 5px;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(255, 251, 30);
+    box-shadow: 10px -10px 30px 10px rgb(243, 23, 206);
+    border-radius: 10% 50%;
+    transition: all 1000ms;
     -webkit-animation: animation 1000ms linear both;
     animation: animation 1000ms linear both;
 }

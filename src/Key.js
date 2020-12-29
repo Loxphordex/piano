@@ -2,14 +2,13 @@ import React from 'react'
 
 export default function Key({
   index,
-  stroke
+  stroke,
+  isActive
 }) {
-  console.log(index)
   return (
     <div
       key={index}
-      className={`key key-${stroke}`}>
-      
+      className={`key-${stroke} ${isActive()}`}>
     </div>
   )
 }
